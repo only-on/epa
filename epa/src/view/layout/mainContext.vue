@@ -1,0 +1,47 @@
+<template>
+  <div>
+    <div class="main-content">
+      <transition mode="out-in" enter-active-class="bounceInleft" leave-active-class="bounceOutRight">
+        <router-view class="tab-content animated"></router-view>
+      </transition>
+      <!--<div class="footer">CopyRight © 西安通尚电子科技有限公司 .All Rights Reserved 2019 - 2020</div>-->
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+    data () {
+      return {
+      }
+    }
+  }
+</script>
+<style lang='scss' scoped>
+  .main-content {
+    width: 100% -140px;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    right: 0;
+    left: 140px;
+    overflow: auto;
+    z-index: 1;
+    background-color: #F6F6F6;
+    transition: left .45s cubic-bezier(.23, 1, .32, 1);
+    .tabs-content {
+      height: 100%;
+    }
+  }
+  /*.layout-footer-center{*/
+    /*width:100% !important;*/
+    /*text-align: center;*/
+    /*padding: 25px !important;*/
+    /*bottom:0px;*/
+    /*right: 0;*/
+  /*}*/
+  /*.footer{*/
+    /*padding: 20px;*/
+    /*font-size: 14px;*/
+  /*}*/
+</style>
+
