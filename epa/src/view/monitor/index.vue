@@ -532,11 +532,11 @@
             barWidth: 15,
             label: {
               show: true,
-              position: 'top',
-              textStyle: {
-                color: '#fff',
-                fontSize: 14,
-              }
+              // position: 'top',
+              // textStyle: {
+              //   color: '#fff',
+              //   fontSize: 14,
+              // }
             },
           }, {
             data: [5, 7, 5, 6, 5, 2],
@@ -546,11 +546,11 @@
             barWidth: 15,
             label: {
               show: true,
-              position: 'top',
-              textStyle: {
-                color: '#fff',
-                fontSize: 14,
-              }
+              // position: 'top',
+              // textStyle: {
+              //   color: '#fff',
+              //   fontSize: 14,
+              // }
             },
             // label: {
             //   show: true
@@ -563,11 +563,11 @@
             barWidth: 15,
             label: {
               show: true,
-              position: 'top',
-              textStyle: {
-                color: '#fff',
-                fontSize: 14,
-              }
+              // position: 'top',
+              // textStyle: {
+              //   color: '#fff',
+              //   fontSize: 14,
+              // }
             },
           }, ]
         }
@@ -929,24 +929,24 @@
       getDistribution () {
         this.list = [
           {
-            companyName: '北新集团建材股份有限公司',
-            address: '陕西西安雁塔区',
-            warningNum: 3,
-            CallNum: 2,
+            companyName: 'xxxxx加油站',
+            address: '陕西省西安市雁塔区',
+            warningNum: 0,
+            CallNum: 0,
             address_x: 108.892252,
             address_y: 34.198946
           },
           {
-            companyName: 'xxxxxxxx有限公司',
-            address: '陕西西安未央区',
+            companyName: 'xxxxx加油站',
+            address: '陕西省西安市未央区',
             warningNum: 1,
             CallNum: 3,
             address_x: 108.949376,
             address_y: 34.301295
           },
           {
-            companyName: 'xxxxxxxx有限公司',
-            address: '陕西西安西咸新区秦汉新城',
+            companyName: 'xxxxx加油站',
+            address: '陕西省西安市西咸新区秦汉新城',
             warningNum: 1,
             CallNum: 3,
             address_x: 108.552585,
@@ -1007,7 +1007,8 @@
         }
         let infoWindow =  new BMapLib.InfoBox(map, sContent, opts)// 创建信息窗口对象
         // 默认打开第一个信息窗体
-        if (thi.openFlag === true) {
+        if (thi.openFlag === true) {		
+          thi.lastInfoWindow = infoWindow
           infoWindow.open(marker)
           thi.openFlag = false
         }
